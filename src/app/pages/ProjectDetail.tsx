@@ -134,12 +134,12 @@ export default function ProjectDetail() {
                 <span className="w-3 h-3 rounded-full bg-white/15" />
                 <div className="ml-3 flex-1 max-w-md h-6 rounded-md bg-white/[0.04] border border-white/5 hidden sm:block" />
               </div>
-              <div className="relative aspect-video overflow-hidden">
-                <motion.div style={{ y: imageY }} className="absolute inset-0 scale-110">
-                  <ImageWithFallback src={project.image} alt={project.title} className="w-full h-full object-cover" />
-                </motion.div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/40 to-transparent pointer-events-none" />
-              </div>
+              <div className="relative overflow-hidden bg-[#0a0a0c] p-3 sm:p-4">
+  <motion.div style={{ y: imageY }} className="relative rounded-xl overflow-hidden">
+    <ImageWithFallback src={project.image} alt={project.title} className="w-full h-auto object-contain" />
+  </motion.div>
+  <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/40 to-transparent pointer-events-none" />
+</div>
             </motion.div>
           </motion.div>
         </div>

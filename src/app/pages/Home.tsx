@@ -5,6 +5,10 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { TechnicalEcosystem } from "../components/TechnicalEcosystem";
 import { useRef, useEffect, useState } from "react";
 
+//projects 
+import resumeIQDesktop from "../../assests/projects/resumeIQ/resumeIQHero.png"
+
+
 const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -33,12 +37,12 @@ const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string
 const projects = [
   {
     id: "nexus",
-    title: "Nexus API Gateway",
-    category: "Distributed Systems",
-    metrics: "10k+ Req/Sec",
-    image: "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RlJTIwZWRpdG9yJTIwdHlwZXNjcmlwdCUyMHJlYWN0JTIwZGFyayUyMHRoZW1lJTIwc2NyZWVufGVufDF8fHx8MTc4MTcyNDg5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["Go", "gRPC", "Redis", "Docker"],
-    description: "A high-performance, lightweight API gateway built in Go. Handles rate limiting, authentication, and load balancing across microservices. Reduced latency by 40% compared to previous Node.js implementation.",
+    title: "ResumeIQ",
+    category: "Full Stack Project",
+    metrics: "AI-Powered Resume Analysis",
+    image: resumeIQDesktop,
+    tags: ["Node.js", "React", "MongoDB", "puppeteer"],
+    description: "An AI-powered interview preparation platform that analyzes resumes against job descriptions, generates personalized interview questions, identifies skill gaps, and creates ATS-optimized resumes with intelligent PDF generation.",
   },
   {
     id: "aether",
@@ -116,7 +120,7 @@ export default function Home() {
               <Link to="/projects" className="justify-center w-full md:w-auto px-4 md:px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-all flex items-center gap-2 text-sm md:text-base">
                 <Briefcase className="w-4 h-4" /> View My Work
               </Link>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="justify-center w-full md:w-auto px-4 md:px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center gap-2 font-medium text-white text-sm md:text-base">
+              <a href="https://github.com/Aman-AK1" target="_blank" rel="noreferrer" className="justify-center w-full md:w-auto px-4 md:px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center gap-2 font-medium text-white text-sm md:text-base">
                 <Github className="w-4 h-4" /> GitHub
               </a>
               <a href="/resume.pdf" download className="justify-center w-full md:w-auto px-4 md:px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center gap-2 font-medium text-white text-sm md:text-base">
@@ -225,21 +229,31 @@ export default function Home() {
                   </div>
                   <div className="flex gap-4 pt-4">
                     <Link to={`/projects/${project.id}`} className="px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-all">
-                      Read Case Study
+                      Read More
                     </Link>
                   </div>
                 </div>
 
                 {/* Project Image */}
                 <Link to={`/projects/${project.id}`} className="w-full md:w-1/2 group block overflow-hidden rounded-2xl border border-white/10 bg-white/5 relative">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10 duration-500" />
+                  {/* <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10 duration-500" />
                   <div className="relative overflow-hidden aspect-[16/10] md:aspect-[4/3] bg-[#111113]">
                     <ImageWithFallback 
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
-                  </div>
+                  </div> */}
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10 duration-500" />
+<div className="relative overflow-hidden bg-[#111113] p-2.5">
+  <div className="relative overflow-hidden rounded-lg">
+    <ImageWithFallback 
+      src={project.image}
+      alt={project.title}
+      className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
+    />
+  </div>
+</div>
                 </Link>
               </motion.div>
             ))}

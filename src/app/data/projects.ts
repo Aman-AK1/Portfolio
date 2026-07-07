@@ -1,6 +1,16 @@
 // Shared project data — used by the archive (Projects.tsx), the detail page
 // (ProjectDetail.tsx) and prev/next navigation so everything stays in sync.
 
+
+//resumeIQ
+import resumeIQHero from "../../assests/projects/resumeIQ/resumeIQHero.png";
+import resumeIQDashboard from "../../assests/projects/resumeIQ/resumeIQDashboard.png"
+import resumeIQLogin from "../../assests/projects/resumeIQ/resumeIQLogin.png"
+import resumeIQReports from "../../assests/projects/resumeIQ/resumeIQReports.png"
+
+
+
+
 export interface GalleryItem {
   label: string;
   image: string;
@@ -39,21 +49,30 @@ export interface Project {
   future: string[];
 }
 
-const IMG = {
-  code: "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RlJTIwZWRpdG9yJTIwdHlwZXNjcmlwdCUyMHJlYWN0JTIwZGFyayUyMHRoZW1lJTIwc2NyZWVufGVufDF8fHx8MTc4MTcyNDg5Mnww&ixlib=rb-4.1.0&q=80&w=1200",
-  dashboard: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbW9kZSUyMGRhc2hib2FyZCUyMGludGVyZmFjZSUyMHNvZnR3YXJlfGVufDF8fHx8MTc4MTcyNDg4Nnww&ixlib=rb-4.1.0&q=80&w=1200",
-  mobile: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkYXJrJTIwZWxlZ2FudCUyMG1vY2t1cHxlbnwxfHx8fDE3ODE3MjQ4ODl8MA&ixlib=rb-4.1.0&q=80&w=1200",
-  design: "https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHdvcmtzcGFjZSUyMGNvbG9yJTIwcGFsZXR0ZSUyMGRhcmt8ZW58MXx8fHwxNzgzMDgxNjE3fDA&ixlib=rb-4.1.0&q=80&w=1200",
-  reports: "https://images.unsplash.com/photo-1760548425425-e42e77fa38f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxoYWNrYXRob24lMjBjb2RpbmclMjB0ZWFtJTIwdGVjaG5vbG9neSUyMGRhcmslMjBhYnN0cmFjdHxlbnwxfHx8fDE3ODMwNzk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1200",
-};
-
-const galleryPool = (): GalleryItem[] => [
-  { label: "Desktop", image: IMG.code },
-  { label: "Dashboard", image: IMG.dashboard },
-  { label: "Mobile", image: IMG.mobile },
-  { label: "Features", image: IMG.design },
-  { label: "Reports", image: IMG.reports },
+const resumeIQGallery: GalleryItem[] = [
+  { label: "Desktop", image: resumeIQHero },
+  { label: "Dashboard", image: resumeIQDashboard },
+  {label: "Welcome", image : resumeIQLogin},
+  // { label: "Mobile", image: resumeIQMobile },
+  // { label: "Features", image: resumeIQFeatures },
+  { label: "Reports", image: resumeIQReports },
 ];
+
+// const IMG = {
+//   code: hero,
+//   dashboard: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbW9kZSUyMGRhc2hib2FyZCUyMGludGVyZmFjZSUyMHNvZnR3YXJlfGVufDF8fHx8MTc4MTcyNDg4Nnww&ixlib=rb-4.1.0&q=80&w=1200",
+//   mobile: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkYXJrJTIwZWxlZ2FudCUyMG1vY2t1cHxlbnwxfHx8fDE3ODE3MjQ4ODl8MA&ixlib=rb-4.1.0&q=80&w=1200",
+//   design: "https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHdvcmtzcGFjZSUyMGNvbG9yJTIwcGFsZXR0ZSUyMGRhcmt8ZW58MXx8fHwxNzgzMDgxNjE3fDA&ixlib=rb-4.1.0&q=80&w=1200",
+//   reports: "https://images.unsplash.com/photo-1760548425425-e42e77fa38f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxoYWNrYXRob24lMjBjb2RpbmclMjB0ZWFtJTIwdGVjaG5vbG9neSUyMGRhcmslMjBhYnN0cmFjdHxlbnwxfHx8fDE3ODMwNzk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1200",
+// };
+
+// const galleryPool = (): GalleryItem[] => [
+//   { label: "Desktop", image: IMG.code },
+//   { label: "Dashboard", image: IMG.dashboard },
+//   { label: "Mobile", image: IMG.mobile },
+//   { label: "Features", image: IMG.design },
+//   { label: "Reports", image: IMG.reports },
+// ];
 
 export const projects: Project[] = [
   {
@@ -64,7 +83,7 @@ export const projects: Project[] = [
     role: "Full Stack Lead",
     category: "Web Application",
     tags: ["Featured", "AI", "Full Stack"],
-    image: IMG.dashboard,
+    image: resumeIQHero,
     meta: { type: "Solo Project", stack: "MERN + AI", duration: "3 Months", year: "2024" },
     context: "Personal Project",
     timeline: "3 Months",
@@ -99,7 +118,7 @@ export const projects: Project[] = [
         outcome: "Smooth multi-cursor collaboration without lost edits.",
       },
     ],
-    gallery: galleryPool(),
+    gallery: resumeIQGallery,
     impact: [
       "AI Generated Reports",
       "Real-time Collaboration",
@@ -119,63 +138,63 @@ export const projects: Project[] = [
   },
   {
     id: "nexus",
-    title: "Nexus API Gateway",
-    subtitle: "A high-performance, lightweight API gateway focused on developer experience.",
-    year: "2024",
-    role: "Solo Developer",
+    title: "ResumeIQ",
+    subtitle: "An AI-powered platform that helps candidates prepare smarter by combining resume analysis, interview simulations, ATS optimization, and personalized learning.",
+    year: "2026",
+    role: "Full Stack Developer",
     category: "Distributed Systems",
     tags: ["Featured", "Full Stack", "Research"],
-    image: IMG.code,
-    meta: { type: "Solo Project", stack: "Go + Redis", duration: "2 Months", year: "2024" },
+    image: resumeIQHero,
+    meta: { type: "Solo Project", stack: "MERN + Gemini AI", duration: "2 Months", year: "2026" },
     context: "Personal Project",
     timeline: "2 Months",
-    stack: ["Go", "Redis", "Docker", "JWT", "GitHub Actions"],
-    liveUrl: "#",
-    sourceUrl: "#",
+    stack: ["React", "Node.js", "Express", "MongoDB", " Gemini AI", "Puppeteer"],
+    liveUrl: "https://resume-iq-blond.vercel.app/",
+    sourceUrl: "https://github.com/Aman-AK1/ResumeIQ",
     caseStudy: {
       problem:
-        "Small and medium projects need rate limiting, auth and load balancing, but standing up a full gateway felt disproportionately heavy.",
+        "Job seekers often struggle to understand whether their resume matches a specific role, what interview questions they should prepare for, and how to improve their chances of getting shortlisted. Most existing tools solve only one part of this journey, requiring users to switch between multiple platforms.",
       gap:
-        "Kong and Envoy are powerful but complex to configure, with a steep learning curve and a large operational footprint for modest use cases.",
+        "Most resume tools only provide ATS scores or keyword suggestions. They rarely explain skill gaps, generate role-specific interview preparation plans, or create customized resumes based on individual job descriptions.",
       approach:
-        "I focused on developer experience: a single YAML file, sensible defaults and a tiny footprint, while keeping the core primitives production-grade.",
+        "I built ResumeIQ as an end-to-end career preparation platform where AI evaluates resumes, compares them against job descriptions, generates interview questions, highlights missing skills, and creates ATS-friendly resumes—all within a single workflow.",
       solution:
-        "A reverse proxy in Go with token-bucket rate limiting backed by Redis, JWT auth, and hot-reloading configuration — all shipped in a minimal Docker image.",
+        "A full-stack MERN application powered by Google's Gemini AI that delivers resume analysis, AI-generated interview reports, personalized preparation plans, resume generation, secure authentication, and downloadable professional PDF resumes.",
     },
-    architecture: ["Client", "Gateway (Go)", "Auth + Rate Limit", "Upstream Services", "Redis Store", "Docker Deploy"],
+    architecture: ["User", "React Frontend", "Node.js API", "Gemini AI", "Analysis Engine", "MongoDB Database", "PDF Generator"],
     challenges: [
       {
-        challenge: "Config changes required restarting the server.",
-        solution: "Built a file watcher that atomically swaps routing rules at runtime.",
-        outcome: "Zero-downtime config updates.",
+        challenge: "AI responses were inconsistent and sometimes returned malformed JSON.",
+        solution: "Implemented structured prompts, validation layers, and fallback parsing to ensure reliable responses before presenting results.",
+        outcome: "Consistent AI-generated reports with significantly fewer parsing failures.",
       },
       {
-        challenge: "Rate limiting needed to be accurate under load.",
-        solution: "Implemented a distributed token bucket in Redis with atomic Lua scripts.",
-        outcome: "Consistent limits across many concurrent instances.",
+        challenge: "Generating professional ATS-friendly PDF resumes dynamically.",
+        solution: "Built HTML resume templates and used Puppeteer to generate polished PDF documents with consistent layouts.",
+        outcome: "Users can instantly download clean, printable resumes optimized for ATS systems.",
       },
       {
-        challenge: "Latency overhead had to stay minimal.",
-        solution: "Reused connections and avoided allocations on the hot path.",
-        outcome: "Sub-2ms overhead at 10k concurrent connections.",
+        challenge: "Managing authentication securely across frontend and backend deployments.",
+        solution: "Implemented JWT authentication, protected routes, secure cookies, token blacklisting, and persistent login sessions.",
+        outcome: "Secure user authentication with reliable session management.",
       },
     ],
-    gallery: galleryPool(),
+    gallery: resumeIQGallery,
     impact: [
-      "<2ms Latency Overhead",
-      "Hot Config Reload",
-      "JWT Authentication",
-      "Distributed Rate Limiting",
-      "Dockerised Deployment",
-      "Secure Backend",
+      "AI Resume Analysis",
+      "ATS Resume Generator",
+      "Personalized Interview Questions",
+      "Skill Gap Detection",
+      "Preparation Roadmaps",
+      "Professional PDF Export",
     ],
     learnings:
-      "Building this deepened my understanding of HTTP/2, reverse proxies and Go's concurrency model. I learned to profile before optimising and that great defaults are a feature. Open-sourcing it taught me how much documentation matters to adoption.",
+      "This project strengthened my understanding of prompt engineering, backend architecture, authentication, PDF generation, and integrating large language models into production-ready web applications. I also learned how important error handling and structured AI outputs are for creating reliable user experiences.",
     future: [
-      "Add a plugin system for custom middleware",
-      "Support gRPC and WebSocket upstreams",
-      "Add distributed tracing out of the box",
-      "Expand the test suite with fuzzing",
+      "Add support for multiple AI providers for automatic fallback",
+      "Introduce real-time voice mock interviews",
+      "Build recruiter dashboards with candidate analytics",
+      "Add collaborative resume reviews and feedback sharing",
     ],
   },
   {
@@ -186,7 +205,7 @@ export const projects: Project[] = [
     role: "Mobile Engineer",
     category: "iOS / Android",
     tags: ["Full Stack", "UI/UX"],
-    image: IMG.mobile,
+    image: resumeIQHero,
     meta: { type: "Solo Project", stack: "React Native", duration: "6 Weeks", year: "2023" },
     context: "Personal Project",
     timeline: "6 Weeks",
@@ -221,7 +240,7 @@ export const projects: Project[] = [
         outcome: "A calm interface that keeps focus on the task.",
       },
     ],
-    gallery: galleryPool(),
+    gallery: resumeIQGallery,
     impact: [
       "Offline-First",
       "Instant Capture",
@@ -247,7 +266,7 @@ export const projects: Project[] = [
     role: "Backend Engineer",
     category: "Finance / Data",
     tags: ["AI", "Research"],
-    image: IMG.reports,
+    image: resumeIQHero,
     meta: { type: "Solo Project", stack: "Python + Data", duration: "10 Weeks", year: "2023" },
     context: "Research Project",
     timeline: "10 Weeks",
@@ -282,7 +301,7 @@ export const projects: Project[] = [
         outcome: "Faster, clearer decision-making.",
       },
     ],
-    gallery: galleryPool(),
+    gallery: resumeIQGallery,
     impact: [
       "Reproducible Backtests",
       "Risk Analytics",
@@ -308,7 +327,7 @@ export const projects: Project[] = [
     role: "Open Source",
     category: "Developer Tooling",
     tags: ["Full Stack", "Research"],
-    image: IMG.code,
+    image: resumeIQHero,
     meta: { type: "Open Source", stack: "Node.js CLI", duration: "4 Weeks", year: "2023" },
     context: "Open Source",
     timeline: "4 Weeks",
@@ -343,7 +362,7 @@ export const projects: Project[] = [
         outcome: "Faster community contributions.",
       },
     ],
-    gallery: galleryPool(),
+    gallery: resumeIQGallery,
     impact: [
       "Composable Templates",
       "Interactive Prompts",
@@ -369,7 +388,7 @@ export const projects: Project[] = [
     role: "Frontend Engineer",
     category: "Academic Tool",
     tags: ["UI/UX", "Full Stack", "Hackathons"],
-    image: IMG.design,
+    image: resumeIQHero,
     meta: { type: "Hackathon", stack: "React + UIUX", duration: "48 Hours", year: "2022" },
     context: "Hackathon Project",
     timeline: "48 Hours",
@@ -404,7 +423,7 @@ export const projects: Project[] = [
         outcome: "Great experience on phones and laptops alike.",
       },
     ],
-    gallery: galleryPool(),
+    gallery: resumeIQGallery,
     impact: [
       "Unified Dashboard",
       "Mobile Responsive",
