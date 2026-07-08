@@ -209,7 +209,7 @@ export default function ProjectDetail() {
             {/* Architecture */}
             <section>
               <motion.h3 {...fadeUp} transition={{ duration: 0.5 }} className="text-2xl font-semibold text-white mb-8">
-                Architecture
+                 {project.sectionTitle}
               </motion.h3>
               <div className="flex flex-col md:flex-row md:flex-wrap md:items-stretch gap-3">
                 {project.architecture.map((node, i) => (

@@ -9,7 +9,12 @@ import resumeIQLogin from "../../assests/projects/resumeIQ/resumeIQLogin.png"
 import resumeIQReports from "../../assests/projects/resumeIQ/resumeIQReports.png"
 
 
-
+//EVJoints
+import EVJointsHero from "../../assests/projects/EVJoints/EVJointsHero.png";
+import EVJointsBlog from "../../assests/projects/EVJoints/EVJointsBlog.jpeg"
+import EVJointsFAQ from "../../assests/projects/EVJoints/EVJointsFAQ.png"
+import EVJointsMobile from "../../assests/projects/EVJoints/EVJointsMobile.png"
+import EVJointsTools from "../../assests/projects/EVJoints/EVJointsTools.png"
 
 export interface GalleryItem {
   label: string;
@@ -41,6 +46,7 @@ export interface Project {
   liveUrl: string;
   sourceUrl: string;
   caseStudy: { problem: string; gap: string; approach: string; solution: string };
+  sectionTitle: string;
   architecture: string[];
   challenges: Challenge[];
   gallery: GalleryItem[];
@@ -56,6 +62,15 @@ const resumeIQGallery: GalleryItem[] = [
   // { label: "Mobile", image: resumeIQMobile },
   // { label: "Features", image: resumeIQFeatures },
   { label: "Reports", image: resumeIQReports },
+];
+
+const EVJointsGallery: GalleryItem[] = [
+  { label: "Desktop", image: EVJointsHero },
+  { label: "Guide", image: EVJointsBlog },
+  {label: "FAQ", image : EVJointsFAQ},
+  { label: "Mobile", image: EVJointsMobile },
+  // { label: "Features", image: resumeIQFeatures },
+  { label: "Tools", image: EVJointsTools },
 ];
 
 // const IMG = {
@@ -100,6 +115,7 @@ export const projects: Project[] = [
       solution:
         "A responsive web application that visualizes glacial lake locations, flood risk information, and geospatial data using interactive maps, enabling users to explore disaster insights through an intuitive interface.",
     },
+    sectionTitle: "Architecture",
     architecture: ["User", "React Frontend", "Express API", "OpenAI + MongoDB", "Object Storage", "Vercel Deploy"],
     challenges: [
       {
@@ -161,6 +177,7 @@ export const projects: Project[] = [
       solution:
         "A full-stack MERN application powered by Google's Gemini AI that delivers resume analysis, AI-generated interview reports, personalized preparation plans, resume generation, secure authentication, and downloadable professional PDF resumes.",
     },
+    sectionTitle: "Architecture",
     architecture: ["User", "React Frontend", "Node.js API", "Gemini AI", "Analysis Engine", "MongoDB Database", "PDF Generator"],
     challenges: [
       {
@@ -205,12 +222,12 @@ export const projects: Project[] = [
     role: "UI/UX Designer & Frontend Developer",
     category: "iOS / Android",
     tags: ["Internship Project", "UI/UX Design","2 Months","2026"],
-    image: resumeIQHero,
+    image: EVJointsHero,
     meta: { type: "Internship Project", stack: "Figma", duration: "3 Months", year: "2026" },
     context: "Professional Internship",
     timeline: "3 Months",
     stack: ["Figma", "React", "Design System", "Tailwind CSS"],
-    liveUrl: "#",
+    liveUrl: "https://fresco-silver-56729650.figma.site/",
     sourceUrl: "#",
     caseStudy: {
       problem:
@@ -222,7 +239,8 @@ export const projects: Project[] = [
       solution:
         "A clean, modern EV platform featuring trip planning, charging station discovery, EV guides, pricing pages, cost calculators, and responsive dashboards designed to deliver a seamless user experience across devices.",
     },
-    architecture: ["User", "React Native UI", "Zustand Store", "SQLite (local)", "Optional Sync", "App Stores"],
+    sectionTitle: "Design Process",
+    architecture: ["Research","User Flows","Wireframes","High Fidelity UI","Design System","Developer Handoff",],
     challenges: [
       {
         challenge: "Creating a consistent experience across multiple product modules.",
@@ -240,7 +258,7 @@ export const projects: Project[] = [
         outcome: "Delivered a seamless and consistent experience across multiple devices.",
       },
     ],
-    gallery: resumeIQGallery,
+    gallery: EVJointsGallery,
     impact: [
       "Design System",
       "15+ Product Screens",
@@ -260,7 +278,7 @@ export const projects: Project[] = [
   },
   {
     id: "synapse",
-    title: "Synapse Algorithmic Trader",
+    title: "Travnir",
     subtitle: "A research platform for backtesting and visualising trading strategies.",
     year: "2023",
     role: "Backend Engineer",
@@ -283,6 +301,7 @@ export const projects: Project[] = [
       solution:
         "A Python engine with a FastAPI layer and a dashboard for comparing strategy performance, drawdown and risk metrics.",
     },
+    sectionTitle: "Architecture",
     architecture: ["Data Source", "Ingestion Pipeline", "Strategy Engine", "PostgreSQL", "FastAPI", "Dashboard"],
     challenges: [
       {
@@ -344,6 +363,7 @@ export const projects: Project[] = [
       solution:
         "A TypeScript CLI with composable templates, sensible defaults and zero leftover boilerplate.",
     },
+    sectionTitle: "Architecture",
     architecture: ["Developer", "CLI Prompt", "Template Engine", "File Generator", "Local Project", "npm Registry"],
     challenges: [
       {
@@ -405,6 +425,7 @@ export const projects: Project[] = [
       solution:
         "A responsive React dashboard designed in Figma first, aggregating schedules, grades and resources into a single glanceable view.",
     },
+    sectionTitle: "Architecture",
     architecture: ["Student", "React Dashboard", "Aggregation Layer", "University APIs", "Cache", "Static Hosting"],
     challenges: [
       {
