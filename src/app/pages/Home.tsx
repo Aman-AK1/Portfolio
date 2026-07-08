@@ -4,7 +4,7 @@ import { ArrowRight, ChevronRight, Code2, Database, Layout, Smartphone, Github, 
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { TechnicalEcosystem } from "../components/TechnicalEcosystem";
 import { useRef, useEffect, useState } from "react";
-
+import heroImage from "../../assests/images/HeroImage.png"
 //projects 
 import resumeIQDesktop from "../../assests/projects/resumeIQ/resumeIQHero.png"
 
@@ -139,9 +139,9 @@ export default function Home() {
             className="lg:col-span-4 relative hidden md:block"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-fuchsia-500/20 blur-2xl rounded-full" />
-            <div className="relative rounded-2xl border border-white/10 bg-[#111113]/80 backdrop-blur-xl p-2 shadow-2xl overflow-hidden">
+            <div className="relative rounded-xl border border-white/10 bg-[#111113]/80 backdrop-blur-xl p-2 shadow-2xl overflow-hidden">
                <ImageWithFallback 
-                 src="https://images.unsplash.com/photo-1634938332514-6f3d23c8cc42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMGFzaWFuJTIwbWFuJTIwc29mdHdhcmUlMjBlbmdpbmVlciUyMGxvb2tpbmclMjBhdCUyMGNhbWVyYSUyMGRhcmslMjBiYWNrZ3JvdW5kJTIwc3R1ZGlvfGVufDF8fHx8MTc4MTcyNDg3OXww&ixlib=rb-4.1.0&q=80&w=1080"
+                 src={heroImage}
                  alt="Profile"
                  className="w-full h-auto aspect-[4/5] object-cover rounded-xl filter grayscale hover:grayscale-0 transition-all duration-700"
                />

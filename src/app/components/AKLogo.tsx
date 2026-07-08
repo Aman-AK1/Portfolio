@@ -1,10 +1,7 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-
-// Sample brand image used inside the logo mark. Swap this out for the real
+import AKLo from "../../assests/images/PortfolioLogo.jpeg";// Sample brand image used inside the logo mark. Swap this out for the real
 // AK logo asset whenever it's ready.
-const LOGO_IMAGE =
-  "https://images.unsplash.com/photo-1658998765622-962cb51e7888?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdyYWRpZW50JTIwcHVycGxlJTIwYmx1ZSUyMGxvZ28lMjBtYXJrJTIwbWluaW1hbHxlbnwxfHx8fDE3ODMwOTg1Nzl8MA&ixlib=rb-4.1.0&q=80&w=400";
-
+const LOGO_IMAGE = AKLo;
 interface AKLogoProps {
   /** Pixel size of the square logo mark. Defaults to 32. */
   size?: number;
