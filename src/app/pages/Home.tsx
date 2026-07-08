@@ -7,6 +7,8 @@ import { useRef, useEffect, useState } from "react";
 import heroImage from "../../assests/images/HeroImage.png"
 //projects 
 import resumeIQDesktop from "../../assests/projects/resumeIQ/resumeIQHero.png"
+import GLOFHero from "../../assests/projects/GLOF Tracker/GLOFHero.png"
+import EVJointsHero from "../../assests/projects/EVJoints/EVJointsHero.png"
 
 
 const AnimatedNumber = ({ value, suffix = "" }: { value: number; suffix?: string }) => {
@@ -49,7 +51,7 @@ const projects = [
     title: "GLOF Tracker",
     category: "RESEARCH & MAJOR PROJECT",
     metrics: "Disaster Management",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbW9kZSUyMGRhc2hib2FyZCUyMGludGVyZmFjZSUyMHNvZnR3YXJlfGVufDF8fHx8MTc4MTcyNDg4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+    image: GLOFHero,
     tags: ["React", "Node.js", "Tailwind CSS", "REST APIs"],
     description: "A web platform designed to visualize Glacial Lake Outburst Flood (GLOF) risk zones using satellite imagery, terrain data, and interactive maps. Built to help users understand potential flood threats through an intuitive interface.",
   },
@@ -58,8 +60,8 @@ const projects = [
     title: "EVJoints",
     category: "INTERNSHIP PROJECT",
     metrics: "UI/UX • Product Design",
-    image: resumeIQDesktop,
-    tags: ["React Native", "Zustand", "SQLite", "Tailwind"],
+    image: EVJointsHero,
+    tags: ["React ", "Figma", "UI/UX", "Tailwind"],
     description: "Designed and developed modern, user-centric interfaces for an EV ecosystem platform featuring trip planning, charging discovery, EV tools, and educational resources to improve the electric vehicle experience.",
   },
 ];
@@ -143,7 +145,17 @@ export default function Home() {
                <ImageWithFallback 
                  src={heroImage}
                  alt="Profile"
-                 className="w-full h-auto aspect-[4/5] object-cover rounded-xl filter grayscale hover:grayscale-0 transition-all duration-700"
+                 className="w-full
+h-auto
+aspect-[4/5]
+object-cover
+rounded-xl
+grayscale
+hover:grayscale-0
+hover:scale-[1.02]
+transition-all
+duration-700
+ease-out"
                />
             </div>
           </motion.div>

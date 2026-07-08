@@ -29,16 +29,16 @@ type Technology = {
 
 const technologies: Technology[] = [
   // Frontend
-  { id: "react", name: "React", categoryId: "frontend", description: "Used for building modern user interfaces and scalable web applications.", projects: ["GLOF Tracker", "MedX", "Travnir"], icon: "https://cdn.simpleicons.org/react/white" },
+  { id: "react", name: "React", categoryId: "frontend", description: "Used for building modern user interfaces and scalable web applications.", projects: ["GLOF Tracker", "CuraAI", "resumeIQ"], icon: "https://cdn.simpleicons.org/react/white" },
   { id: "nextjs", name: "Next.js", categoryId: "frontend", description: "React framework for production-grade, server-rendered applications.", projects: ["AK Portfolio", "GLOF Tracker"], icon: "https://cdn.simpleicons.org/nextdotjs/white" },
   { id: "javascript", name: "JavaScript", categoryId: "frontend", description: "The foundation of my interactive web development workflow.", projects: ["All Projects"], icon: "https://cdn.simpleicons.org/javascript/white" },
-  { id: "tailwindcss", name: "Tailwind CSS", categoryId: "frontend", description: "Utility-first CSS framework for rapid and consistent UI styling.", projects: ["AK Portfolio", "GLOF Tracker"], icon: "https://cdn.simpleicons.org/tailwindcss/white" },
+  { id: "tailwindcss", name: "Tailwind CSS", categoryId: "frontend", description: "Utility-first CSS framework for rapid and consistent UI styling.", projects: ["AK Portfolio", "GLOF Tracker", "CuraAI"], icon: "https://cdn.simpleicons.org/tailwindcss/white" },
 
   // Backend
-  { id: "nodejs", name: "Node.js", categoryId: "backend", description: "Powering scalable and high-performance server-side applications.", projects: ["GLOF Tracker", "MedX"], icon: "https://cdn.simpleicons.org/nodedotjs/white" },
-  { id: "express", name: "Express.js", categoryId: "backend", description: "Minimalist web framework for building robust RESTful APIs.", projects: ["GLOF Tracker", "MedX"], icon: "https://cdn.simpleicons.org/express/white" },
-  { id: "mongodb", name: "MongoDB", categoryId: "backend", description: "Flexible NoSQL document-based storage for rapid development.", projects: ["Travnir", "MedX"], icon: "https://cdn.simpleicons.org/mongodb/white" },
-  { id: "sql", name: "SQL", categoryId: "backend", description: "Structured query language for relational data modeling and queries.", projects: ["Enterprise Apps", "MedX"], icon: "https://cdn.simpleicons.org/mysql/white" },
+  { id: "nodejs", name: "Node.js", categoryId: "backend", description: "Powering scalable and high-performance server-side applications.", projects: ["GLOF Tracker", "CuraAI"], icon: "https://cdn.simpleicons.org/nodedotjs/white" },
+  { id: "express", name: "Express.js", categoryId: "backend", description: "Minimalist web framework for building robust RESTful APIs.", projects: ["GLOF Tracker", "CuraAI"], icon: "https://cdn.simpleicons.org/express/white" },
+  { id: "mongodb", name: "MongoDB", categoryId: "backend", description: "Flexible NoSQL document-based storage for rapid development.", projects: ["Travnir", "CuraAI","resumeIQ"], icon: "https://cdn.simpleicons.org/mongodb/white" },
+  { id: "sql", name: "SQL", categoryId: "backend", description: "Structured query language for relational data modeling and queries.", projects: [], icon: "https://cdn.simpleicons.org/mysql/white" },
 
   // Design
   { id: "figma", name: "Figma", categoryId: "design", description: "Primary tool for wireframing, prototyping, and design systems.", projects: ["All Projects"], icon: "https://cdn.simpleicons.org/figma/white" },
@@ -46,9 +46,9 @@ const technologies: Technology[] = [
 
   // Tools
   { id: "git", name: "Git", categoryId: "tools", description: "Essential version control for tracking changes and collaborating.", projects: ["All Projects"], icon: "https://cdn.simpleicons.org/git/white" },
-  { id: "vercel", name: "Vercel", categoryId: "tools", description: "Platform for frontend frameworks and static site deployment.", projects: ["AK Portfolio"], icon: "https://cdn.simpleicons.org/vercel/white" },
-  { id: "render", name: "Render", categoryId: "tools", description: "Cloud platform for hosting web services, APIs, and databases.", projects: ["GLOF Tracker", "MedX"], icon: "https://cdn.simpleicons.org/render/white" },
-  { id: "cloudinary", name: "Cloudinary", categoryId: "tools", description: "Image and video API for rendering and optimization.", projects: ["GLOF Tracker"], icon: "https://cdn.simpleicons.org/cloudinary/white" },
+  { id: "vercel", name: "Vercel", categoryId: "tools", description: "Platform for frontend frameworks and static site deployment.", projects: ["AK Portfolio","resumeIQ","Glof Tracker"], icon: "https://cdn.simpleicons.org/vercel/white" },
+  { id: "render", name: "Render", categoryId: "tools", description: "Cloud platform for hosting web services, APIs, and databases.", projects: ["GLOF Tracker", "resumeIQ", "Travnir" ], icon: "https://cdn.simpleicons.org/render/white" },
+  { id: "cloudinary", name: "Cloudinary", categoryId: "tools", description: "Image and video API for rendering and optimization.", projects: ["Travnir"], icon: "https://cdn.simpleicons.org/cloudinary/white" },
 ];
 
 // ---------------------------------------------------------------------------
