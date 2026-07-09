@@ -499,12 +499,18 @@ export default function About() {
                 src={PORTRAIT}
                 alt="Aman Khan"
                 className="w-full aspect-[4/5] object-cover grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-1000"
+                // style={{
+                //   WebkitMaskImage:
+                //     "radial-gradient(circle at 50% 42%, #000 55%, transparent 78%)",
+                //   maskImage:
+                //     "radial-gradient(circle at 50% 42%, #000 55%, transparent 78%)",
+                // }}
                 style={{
-                  WebkitMaskImage:
-                    "radial-gradient(circle at 50% 42%, #000 55%, transparent 78%)",
-                  maskImage:
-                    "radial-gradient(circle at 50% 42%, #000 55%, transparent 78%)",
-                }}
+  WebkitMaskImage:
+    "radial-gradient(ellipse 70% 88% at center, #000 58%, transparent 85%)",
+  maskImage:
+    "radial-gradient(ellipse 70% 88% at center, #000 58%, transparent 85%)",
+}}
               />
             </motion.div>
           </motion.div>
