@@ -308,8 +308,8 @@ ease-out"
               <Link to="/contact" className="px-8 py-4 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-all flex items-center gap-2">
                 Let's Talk
               </Link>
-              <a href="mailto:hello@example.com" className="px-8 py-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center gap-2 text-white">
-                hello@example.com
+              <a href="mailto:amannkhan1204@gmail.com" className="px-8 py-4 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center gap-2 text-white">
+                amannkhan1204@gmail.com
               </a>
             </div>
           </motion.div>
