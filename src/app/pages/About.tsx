@@ -11,12 +11,15 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { CertificatesModal, type Certificate } from "../components/CertificatesModal";
 import { BeyondCodeModal, type Interest } from "../components/BeyondCodeModal";
 
+//hero image
+import heroImage from "../../assests/images/HeroImage.png"
+
 /* -------------------------------------------------------------------------- */
 /*  Data                                                                       */
 /* -------------------------------------------------------------------------- */
 
 const PORTRAIT =
-  "https://images.unsplash.com/photo-1634938332514-6f3d23c8cc42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMGFzaWFuJTIwbWFuJTIwc29mdHdhcmUlMjBlbmdpbmVlciUyMGxvb2tpbmclMjBhdCUyMGNhbWVyYSUyMGRhcmslMjBiYWNrZ3JvdW5kJTIwc3R1ZGlvfGVufDF8fHx8MTc4MTcyNDg3OXww&ixlib=rb-4.1.0&q=80&w=1080";
+  heroImage;
 
 const timeline = [
   { year: "2022", title: "Started B.E Computer Engineering", desc: "Began my journey into software engineering and product development.", icon: GraduationCap, image: "https://images.unsplash.com/photo-1499080863200-1f37ed9cb653?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZG9jdW1lbnQlMjBwcmVtaXVtJTIwZGFya3xlbnwxfHx8fDE3ODMwNzk3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080" },

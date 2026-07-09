@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Mail, Send, Loader2, Check, Sparkles } from "lucide-react";
+import { Mail, Send, Loader2, Check, Sparkles, AlertCircle } from "lucide-react";
 
-type Status = "idle" | "loading" | "sent";
+type Status = "idle" | "loading" | "sent" | "error";
 
 const openTo = [
   "Software Engineering",
@@ -17,7 +17,6 @@ const fadeUp = {
   viewport: { once: true, margin: "-60px" },
 };
 
-/* Small, elegant confetti burst — restrained, not excessive. */
 function Confetti() {
   const colors = ["#a855f7", "#6366f1", "#3b82f6", "#ffffff", "#f0abfc"];
   const pieces = Array.from({ length: 14 });
@@ -45,8 +44,11 @@ function Confetti() {
 
 export default function Contact() {
   const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
-  // Magnetic submit button
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [fieldErrors, setFieldErrors] = useState<{ [k: string]: string }>({});
+
   const btnRef = useRef<HTMLButtonElement>(null);
   const [magnet, setMagnet] = useState({ x: 0, y: 0 });
   const handleMagnet = (e: React.MouseEvent) => {
@@ -57,30 +59,79 @@ export default function Contact() {
   };
   const resetMagnet = () => setMagnet({ x: 0, y: 0 });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (status !== "idle") return;
-    setStatus("loading");
-    // Loading → paper plane → sent
-    setTimeout(() => setStatus("sent"), 1400);
-    // Reset after a graceful pause
-    setTimeout(() => setStatus("idle"), 4400);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    // clear error for that field as user types
+    if (fieldErrors[name]) {
+      setFieldErrors((prev) => ({ ...prev, [name]: "" }));
+    }
   };
 
-  const inputClass =
-    "w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder:text-white/30 focus:outline-none focus:border-indigo-400/50 focus:bg-white/[0.05] focus:ring-4 focus:ring-indigo-500/10 focus:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-300";
+  const validate = () => {
+    const errors: { [k: string]: string } = {};
+    if (!form.name.trim()) errors.name = "Please enter your name";
+    if (!form.email.trim()) {
+      errors.email = "Please enter your email";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      errors.email = "Please enter a valid email";
+    }
+    if (!form.message.trim()) errors.message = "Please tell me a bit about why you're reaching out";
+    setFieldErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (status === "loading" || status === "sent") return;
+
+    if (!validate()) return;
+
+    setStatus("loading");
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY, // get free at web3forms.com
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          subject: `New portfolio message from ${form.name}`,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setStatus("sent");
+        setForm({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 4400);
+      } else {
+        throw new Error(data.message || "Something went wrong");
+      }
+    } catch (err: any) {
+      setStatus("error");
+      setErrorMsg("Couldn't send your message. Please try again or email me directly.");
+      setTimeout(() => setStatus("idle"), 4000);
+    }
+  };
+
+  const inputClass = (field: string) =>
+    `w-full bg-white/[0.03] border rounded-xl px-4 py-3.5 text-white placeholder:text-white/30 focus:outline-none focus:ring-4 transition-all duration-300 ${
+      fieldErrors[field]
+        ? "border-red-400/60 focus:border-red-400/60 focus:ring-red-500/10"
+        : "border-white/10 focus:border-indigo-400/50 focus:bg-white/[0.05] focus:ring-indigo-500/10 focus:shadow-[0_0_30px_rgba(99,102,241,0.15)]"
+    }`;
 
   return (
     <div className="pt-24 md:pt-28 pb-10 text-white/90 relative">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* ---------------- LEFT ---------------- */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            {/* Status badge */}
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -104,22 +155,19 @@ export default function Contact() {
             </p>
 
             <div className="space-y-8">
-              {/* Email + Open To: stacked on mobile, side-by-side on desktop */}
               <div className="flex flex-col lg:flex-row lg:items-start gap-8">
-                {/* Email */}
                 <div className="flex items-start gap-4 lg:flex-1">
                   <div className="size-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 shrink-0">
                     <Mail className="size-5" />
                   </div>
                   <div>
                     <h3 className="text-white font-medium mb-1">Email</h3>
-                    <a href="mailto:hello@system.com" className="text-white/60 hover:text-white transition-colors">
-                      hello@system.com
+                    <a href="mailto:amannkhan1204@gmail.com" className="text-white/60 hover:text-white transition-colors">
+                      amannkhan1204@gmail.com
                     </a>
                   </div>
                 </div>
 
-                {/* Open To */}
                 <div className="flex items-start gap-4 lg:flex-1">
                   <div className="size-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 shrink-0">
                     <Sparkles className="size-5" />
@@ -137,13 +185,11 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-
             </div>
           </motion.div>
 
           {/* ---------------- RIGHT (FORM) ---------------- */}
           <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.15 }} className="relative">
-            {/* Radial purple-blue focal glow behind the form */}
             <div className="absolute -inset-8 pointer-events-none">
               <div className="absolute top-0 right-0 w-72 h-72 bg-purple-600/20 rounded-full blur-[110px]" />
               <div className="absolute bottom-0 left-0 w-72 h-72 bg-blue-600/15 rounded-full blur-[110px]" />
@@ -154,35 +200,65 @@ export default function Contact() {
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
               className="relative bg-white/[0.03] border border-white/10 rounded-3xl p-7 md:p-10 backdrop-blur-xl shadow-2xl overflow-hidden"
             >
-              {/* Glass reflection sheen */}
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
               <div className="absolute -top-1/2 -right-1/4 w-1/2 h-full bg-gradient-to-b from-white/[0.06] to-transparent rotate-12 pointer-events-none" />
 
-              <form className="relative z-10 space-y-6" onSubmit={handleSubmit}>
+              <form className="relative z-10 space-y-6" onSubmit={handleSubmit} noValidate>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white/70">Your Name</label>
-                  <input type="text" className={inputClass} placeholder="Jane Doe" />
+                  <input
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    className={inputClass("name")}
+                    placeholder="Jane Doe"
+                  />
+                  {fieldErrors.name && (
+                    <p className="text-red-400 text-xs flex items-center gap-1.5 mt-1">
+                      <AlertCircle className="size-3.5" /> {fieldErrors.name}
+                    </p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white/70">Email Address</label>
-                  <input type="email" className={inputClass} placeholder="jane@company.com" />
+                  <input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    className={inputClass("email")}
+                    placeholder="jane@company.com"
+                  />
+                  {fieldErrors.email && (
+                    <p className="text-red-400 text-xs flex items-center gap-1.5 mt-1">
+                      <AlertCircle className="size-3.5" /> {fieldErrors.email}
+                    </p>
+                  )}
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-white/70">What brings you here?</label>
                   <textarea
+                    name="message"
                     rows={4}
-                    className={`${inputClass} resize-none`}
+                    value={form.message}
+                    onChange={handleChange}
+                    className={`${inputClass("message")} resize-none`}
                     placeholder="Tell me a bit about the role, project, or idea..."
                   />
+                  {fieldErrors.message && (
+                    <p className="text-red-400 text-xs flex items-center gap-1.5 mt-1">
+                      <AlertCircle className="size-3.5" /> {fieldErrors.message}
+                    </p>
+                  )}
                 </div>
 
-                {/* Animated Send button */}
                 <motion.button
                   ref={btnRef}
                   type="submit"
-                  disabled={status !== "idle"}
+                  disabled={status === "loading" || status === "sent"}
                   onMouseMove={status === "idle" ? handleMagnet : undefined}
                   onMouseLeave={resetMagnet}
                   animate={{ x: magnet.x, y: magnet.y }}
@@ -190,6 +266,8 @@ export default function Contact() {
                   className={`relative w-full py-4 rounded-xl font-medium flex items-center justify-center gap-2 overflow-hidden transition-colors duration-500 ${
                     status === "sent"
                       ? "bg-green-500 text-white"
+                      : status === "error"
+                      ? "bg-red-500 text-white"
                       : "bg-white text-black hover:bg-white/90"
                   }`}
                 >
@@ -217,15 +295,6 @@ export default function Contact() {
                         className="flex items-center gap-2"
                       >
                         <Loader2 className="size-4 animate-spin" />
-                        {/* Paper plane flying across */}
-                        <motion.span
-                          initial={{ x: -6, opacity: 0 }}
-                          animate={{ x: 40, y: -14, opacity: [0, 1, 0] }}
-                          transition={{ duration: 1.1, ease: "easeInOut", delay: 0.2 }}
-                          className="absolute"
-                        >
-                          <Send className="size-4 text-black/70" />
-                        </motion.span>
                         Sending
                       </motion.span>
                     )}
@@ -249,10 +318,28 @@ export default function Contact() {
                         Message Sent
                       </motion.span>
                     )}
+
+                    {status === "error" && (
+                      <motion.span
+                        key="error"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="flex items-center gap-2"
+                      >
+                        <AlertCircle className="size-4" />
+                        Failed — Try Again
+                      </motion.span>
+                    )}
                   </AnimatePresence>
 
                   {status === "sent" && <Confetti />}
                 </motion.button>
+
+                {status === "error" && errorMsg && (
+                  <p className="text-red-400 text-sm text-center">{errorMsg}</p>
+                )}
               </form>
             </motion.div>
           </motion.div>
