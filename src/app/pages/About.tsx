@@ -475,7 +475,7 @@ export default function About() {
               <MagneticButton href="https://linkedin.com" target="_blank" className={secondaryBtn}>
                 <Linkedin className="w-4 h-4" /> LinkedIn
               </MagneticButton>
-              <MagneticButton href="/resume.pdf" download className={secondaryBtn}>
+              <MagneticButton href="/ResumeCon.pdf" download className={secondaryBtn}>
                 <Download className="w-4 h-4" /> Resume
               </MagneticButton>
               <MagneticButton to="/contact" className={secondaryBtn}>
@@ -882,7 +882,7 @@ export default function About() {
             <MagneticButton to="/contact" className={primaryBtn}>
               <Mail className="w-4 h-4" /> Let's Talk
             </MagneticButton>
-            <MagneticButton href="/resume.pdf" download className={secondaryBtn}>
+            <MagneticButton href="/ResumeCon.pdf" download className={secondaryBtn}>
               <Download className="w-4 h-4" /> View Resume
             </MagneticButton>
             <MagneticButton href="https://github.com" target="_blank" className={secondaryBtn}>

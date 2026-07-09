@@ -125,7 +125,7 @@ export default function Home() {
               <a href="https://github.com/Aman-AK1" target="_blank" rel="noreferrer" className="justify-center w-full md:w-auto px-4 md:px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center gap-2 font-medium text-white text-sm md:text-base">
                 <Github className="w-4 h-4" /> GitHub
               </a>
-              <a href="/resume.pdf" download className="justify-center w-full md:w-auto px-4 md:px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center gap-2 font-medium text-white text-sm md:text-base">
+              <a href="/ResumeCon.pdf" download className="justify-center w-full md:w-auto px-4 md:px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center gap-2 font-medium text-white text-sm md:text-base">
                 <Download className="w-4 h-4" /> Resume
               </a>
               <Link to="/contact" className="justify-center w-full md:w-auto px-4 md:px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center gap-2 font-medium text-white text-sm md:text-base">
