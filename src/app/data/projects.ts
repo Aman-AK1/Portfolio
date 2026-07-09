@@ -16,6 +16,21 @@ import EVJointsFAQ from "../../assests/projects/EVJoints/EVJointsFAQ.png"
 import EVJointsMobile from "../../assests/projects/EVJoints/EVJointsMobile.png"
 import EVJointsTools from "../../assests/projects/EVJoints/EVJointsTools.png"
 
+//GLOF Trcaker
+import GLOFHero from "../../assests/projects/GLOF Tracker/GLOFHero.png";
+import GLOFMap from "../../assests/projects/GLOF Tracker/GLOFMap.png"
+import GLOFChat from "../../assests/projects/GLOF Tracker/GLOFChat.png"
+import GLOFEmer from "../../assests/projects/GLOF Tracker/GLOFEmer.png"
+import GLOFMobile from "../../assests/projects/GLOF Tracker/GLOFMobile.png"
+import GLOFDon from "../../assests/projects/GLOF Tracker/GLOFDon.png"
+
+//Travnir
+import TravnirHero from "../../assests/projects/Travnir/travnirHero.png"
+import TravnirList from "../../assests/projects/Travnir/TravnirListing.png"
+import TravnirCreate from "../../assests/projects/Travnir/TravnirCreate.png"
+import TravnirReview from "../../assests/projects/Travnir/TravnirReview.png"
+
+
 export interface GalleryItem {
   label: string;
   image: string;
@@ -73,6 +88,24 @@ const EVJointsGallery: GalleryItem[] = [
   { label: "Tools", image: EVJointsTools },
 ];
 
+const GLOFTrackerGallery: GalleryItem[] = [
+  { label: "Desktop", image: GLOFHero },
+  { label: "Chat", image: GLOFChat },
+  {label: "Map", image : GLOFMap},
+  { label: "Emergency", image: GLOFEmer },
+  { label: "Mobile", image: GLOFMobile },
+  { label: "Donations", image: GLOFDon },
+];
+
+const TravnirGallery: GalleryItem[] = [
+  { label: "dashboard", image: TravnirHero },
+  { label: "details", image: TravnirList },
+  {label: "Create own", image : TravnirCreate},
+  // { label: "Mobile", image: resumeIQMobile },
+  // { label: "Features", image: resumeIQFeatures },
+  { label: "Reviews", image: TravnirReview },
+];
+
 // const IMG = {
 //   code: hero,
 //   dashboard: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbW9kZSUyMGRhc2hib2FyZCUyMGludGVyZmFjZSUyMHNvZnR3YXJlfGVufDF8fHx8MTc4MTcyNDg4Nnww&ixlib=rb-4.1.0&q=80&w=1200",
@@ -98,13 +131,13 @@ export const projects: Project[] = [
     role: "Frontend Developer & UI/UX Designer",
     category: "Web Application",
     tags: ["Final Year Project", "Frontend Development", ""],
-    image: resumeIQHero,
+    image: GLOFHero,
     meta: { type: "Solo Project", stack: "MERN + AI", duration: "6 Months", year: "2026" },
     context: "Final Year Engineering Project",
     timeline: "12 Months",
     stack: ["React", "Node.js", "Express", "MongoDB", "Figma"],
-    liveUrl: "#",
-    sourceUrl: "#",
+    liveUrl: "https://gloftracker-nextjs.vercel.app/dashboard",
+    sourceUrl: "https://github.com/Aman-AK1/GlofTracker",
     caseStudy: {
       problem:
         "Understanding glacier-related flood risks often requires interpreting complex satellite imagery and scientific datasets. The goal of GLOF Tracker was to present this information through an intuitive interface that makes disaster monitoring easier to understand.",
@@ -134,7 +167,7 @@ export const projects: Project[] = [
         outcome: "Delivered a seamless experience across different screen sizes.",
       },
     ],
-    gallery: resumeIQGallery,
+    gallery: GLOFTrackerGallery,
     impact: [
       "Interactive Map Visualisation",
       "Responsive Dashboard",
@@ -158,7 +191,7 @@ export const projects: Project[] = [
     subtitle: "An AI-powered platform that helps candidates prepare smarter by combining resume analysis, interview simulations, ATS optimization, and personalized learning.",
     year: "2026",
     role: "Full Stack Developer",
-    category: "Distributed Systems",
+    category: "Web Applications",
     tags: ["Featured", "Full Stack", "Research"],
     image: resumeIQHero,
     meta: { type: "Solo Project", stack: "MERN + Gemini AI", duration: "2 Months", year: "2026" },
@@ -220,7 +253,7 @@ export const projects: Project[] = [
     subtitle: "Designing intuitive digital experiences that simplify electric vehicle adoption through thoughtful product design and user-focused interfaces.",
     year: "2026",
     role: "UI/UX Designer & Frontend Developer",
-    category: "iOS / Android",
+    category: "UI/UX",
     tags: ["Internship Project", "UI/UX Design","2 Months","2026"],
     image: EVJointsHero,
     meta: { type: "Internship Project", stack: "Figma", duration: "3 Months", year: "2026" },
@@ -282,9 +315,9 @@ export const projects: Project[] = [
     subtitle: "A full-stack vacation rental platform built with Node.js, Express, MongoDB, and vanilla JavaScript, offering a seamless experience for property listing and exploration.",
     year: "2025",
     role: "Full Stack Developer",
-    category: "Finance / Data",
+    category: "Web Applications",
     tags: ["AI", "Research"],
-    image: resumeIQHero,
+    image: TravnirHero,
     meta: { type: "Personal Project", stack: "MERN Stack", duration: "2 Months", year: "2025" },
     context: "Personal Project",
     timeline: "2 Months",
@@ -320,7 +353,7 @@ export const projects: Project[] = [
         outcome: "Improved property discovery and provided users with better geographical context.",
       },
     ],
-    gallery: resumeIQGallery,
+    gallery: TravnirGallery,
     impact: [
       "Authentication Systems",
       "CRUD Property Listings",

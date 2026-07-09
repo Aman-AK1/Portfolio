@@ -13,23 +13,74 @@ import { BeyondCodeModal, type Interest } from "../components/BeyondCodeModal";
 
 //hero image
 import heroImage from "../../assests/images/HeroImage.png"
+import AboutHeroImage from "../../assests/images/AboutHero2.jpeg"
+
+//Timeline
+import Started from "../../assests/Timeline/Starting.jpeg"
+import UI from "../../assests/Timeline/UI&UX.jpeg"
+import progClub from "../../assests/Timeline/Programmers ckub.jpeg"
+import AICode from "../../assests/Timeline/AICodex.jpeg"
+import IIGC from "../../assests/Timeline/IIGC.jpeg"
+import IIGCWon from "../../assests/Timeline/IIGC won.jpeg"
+import webathon from "../../assests/Timeline/Webathon.jpeg"
+import EVjoints from "../../assests/Timeline/EVjointsOffice.jpeg"
+import Graduate from "../../assests/Timeline/Graduated.jpeg"
+import Open from "../../assests/Timeline/Open.jpeg"
+
+//Certificates 
+import EvjointsCert from "../../assests/certificates/evjoints internship certificate.jpeg"
+import IIGCCert from "../../assests/certificates/IIGCWon.png"
+import AIcodexCert from "../../assests/certificates/AICodexCert.png"
+import ApnaCert from "../../assests/certificates/Apna Cert.png"
+import IETE from "../../assests/certificates/IETE Cert.png"
+import MumbaiHacksCert from "../../assests/certificates/MumbaiHacks.png"
+import SIH from "../../assests/certificates/SIH 25.jpeg"
+import ProgCert from "../../assests/certificates/ProgLOA.png"
+import webathonCert from "../../assests/certificates/WebathonCert.png"
+import UnthinkCert from "../../assests/certificates/UnthinkCert.png"
+import Codeissence from "../../assests/certificates/Codessience24.jpeg"
+
+
+//Travel 
+import Srk from "../../assests/Beyond/Travel/UK26.jpeg"
+import Ooty from "../../assests/Beyond/Travel/Ooty.jpeg"
+import pass from "../../assests/Beyond/Travel/pass.jpeg"
+import kayak from "../../assests/Beyond/Travel/Kayak.jpeg"
+import Delhi from "../../assests/Beyond/Travel/Del1.jpeg"
+import Mahabaleshwar from "../../assests/Beyond/Travel/Mahabaleshwar.jpeg"
+import Sandhan from "../../assests/Beyond/Travel/Sandhan.jpeg"
+
+//Hackathon
+import mumbaiHacks from "../../assests/Beyond/Hackathon/MumHacks.jpeg"
+import err from "../../assests/Beyond/Hackathon/Err.jpeg"
+import cllg from "../../assests/Beyond/Hackathon/Cllg.jpeg"
+import unthink from "../../assests/Beyond/Hackathon/Unthink.jpeg"
+import err3 from "../../assests/Beyond/Hackathon/err2.jpeg"
+
+//fitness
+import gym1 from "../../assests/Beyond/Fitness/Gym1.jpeg"
+import gym3 from "../../assests/Beyond/Fitness/Gym3.jpeg"
+import gym2 from "../../assests/Beyond/Fitness/Gym 2.jpeg"
+
+
 
 /* -------------------------------------------------------------------------- */
 /*  Data                                                                       */
 /* -------------------------------------------------------------------------- */
 
 const PORTRAIT =
-  heroImage;
+  AboutHeroImage;
 
 const timeline = [
-  { year: "2022", title: "Started B.E Computer Engineering", desc: "Began my journey into software engineering and product development.", icon: GraduationCap, image: "https://images.unsplash.com/photo-1499080863200-1f37ed9cb653?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZG9jdW1lbnQlMjBwcmVtaXVtJTIwZGFya3xlbnwxfHx8fDE3ODMwNzk3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { year: "2023", title: "Discovered UI/UX Design", desc: "Participated in my first hackathon while exploring design thinking.", icon: Palette, image: "https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHdvcmtzcGFjZSUyMGNvbG9yJTIwcGFsZXR0ZSUyMGRhcmt8ZW58MXx8fHwxNzgzMDgxNjE3fDA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { year: "2024", title: "Joined Programmers Club", desc: "Contributed as an Event Management Team member and collaborated on technical events.", icon: Users, image: "https://images.unsplash.com/photo-1760548425425-e42e77fa38f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxoYWNrYXRob24lMjBjb2RpbmclMjB0ZWFtJTIwdGVjaG5vbG9neSUyMGRhcmslMjBhYnN0cmFjdHxlbnwxfHx8fDE3ODMwNzk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { year: "2024", title: "AI Codex Finalist", desc: "Reached the finals and gained valuable experience building under pressure.", icon: Flag, image: "https://images.unsplash.com/photo-1759661881353-5b9cc55e1cf4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxoYWNrYXRob24lMjBjb2RpbmclMjB0ZWFtJTIwdGVjaG5vbG9neSUyMGRhcmslMjBhYnN0cmFjdHxlbnwxfHx8fDE3ODMwNzk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { year: "2025", title: "Won IIGC Hackathon", desc: "My first major hackathon victory, validating both technical and teamwork skills.", icon: Trophy, image: "https://images.unsplash.com/photo-1638636241638-aef5120c5153?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZG9jdW1lbnQlMjBwcmVtaXVtJTIwZGFya3xlbnwxfHx8fDE3ODMwNzk3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { year: "2025", title: "Webathon Finalist", desc: "Continued competing in high-level development competitions.", icon: Award, image: "https://images.unsplash.com/photo-1770486036751-e55247238964?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxoYWNrYXRob24lMjBjb2RpbmclMjB0ZWFtJTIwdGVjaG5vbG9neSUyMGRhcmslMjBhYnN0cmFjdHxlbnwxfHx8fDE3ODMwNzk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { year: "2026", title: "Joined EVJoints", desc: "Worked as a UI/UX Design Intern on real-world EV products.", icon: Briefcase, image: "https://images.unsplash.com/photo-1660836685837-47651f406b30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxoYWNrYXRob24lMjBjb2RpbmclMjB0ZWFtJTIwdGVjaG5vbG9neSUyMGRhcmslMjBhYnN0cmFjdHxlbnwxfHx8fDE3ODMwNzk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { year: "2026", title: "Graduated", desc: "Completed B.E in Computer Engineering with no backlogs.", icon: GraduationCap, image: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZG9jdW1lbnQlMjBwcmVtaXVtJTIwZGFya3xlbnwxfHx8fDE3ODMwNzk3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080" },
+  { year: "2022", title: "Started B.E Computer Engineering", desc: "Began my journey into software engineering and product development.", icon: GraduationCap, image: Started },
+  { year: "2023", title: "Discovered UI/UX Design", desc: "Participated in my first hackathon while exploring design thinking.", icon: Palette, image:UI },
+  { year: "2024", title: "Joined Programmers Club", desc: "Contributed as an Event Management Team member and collaborated on technical events.", icon: Users, image: progClub },
+  { year: "2024", title: "AI Codex Finalist", desc: "Reached the finals and gained valuable experience building under pressure.", icon: Flag, image: AICode },
+  { year: "2025", title: "Won IIGC Hackathon", desc: "My first major hackathon victory, validating both technical and teamwork skills.", icon: Trophy, image: IIGCWon },
+  { year: "2025", title: "Webathon Finalist", desc: "Continued competing in high-level development competitions.", icon: Award, image: webathon },
+  { year: "2026", title: "Joined EVJoints", desc: "Worked as a UI/UX Design Intern on real-world EV products.", icon: Briefcase, image: EVjoints },
+  { year: "2026", title: "Graduated", desc: "Completed B.E in Computer Engineering with no backlogs.", icon: GraduationCap, image: Graduate  },
+  { year: "2026", title: "Open to Opportunities", desc: "Ready to contribute as a Software Engineer,continuously learning and building impactful products.", icon: GraduationCap, image: Open },
 ];
 
 const buildCards = [
@@ -62,15 +113,17 @@ const bento = [
 ];
 
 const certificates: Certificate[] = [
-  { id: "evjoints", title: "EVJoints Internship", subtitle: "UI/UX Design Intern", image: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZG9jdW1lbnQlMjBwcmVtaXVtJTIwZGFya3xlbnwxfHx8fDE3ODMwNzk3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { id: "iigc", title: "IIGC Winner", subtitle: "IIGC Hackathon 2025", image: "https://images.unsplash.com/photo-1638636241638-aef5120c5153?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZG9jdW1lbnQlMjBwcmVtaXVtJTIwZGFya3xlbnwxfHx8fDE3ODMwNzk3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { id: "mern", title: "Full Stack MERN", subtitle: "MERN Certification", image: "https://images.unsplash.com/photo-1607501197654-dcd586bbf39e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZG9jdW1lbnQlMjBwcmVtaXVtJTIwZGFya3xlbnwxfHx8fDE3ODMwNzk3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { id: "aicodex", title: "AI Codex Finalist", subtitle: "AI Codex 2024", image: "https://images.unsplash.com/photo-1760548425425-e42e77fa38f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxoYWNrYXRob24lMjBjb2RpbmclMjB0ZWFtJTIwdGVjaG5vbG9neSUyMGRhcmslMjBhYnN0cmFjdHxlbnwxfHx8fDE3ODMwNzk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { id: "webathon", title: "Webathon Finalist", subtitle: "Webathon 2025", image: "https://images.unsplash.com/photo-1759661881353-5b9cc55e1cf4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxoYWNrYXRob24lMjBjb2RpbmclMjB0ZWFtJTIwdGVjaG5vbG9neSUyMGRhcmslMjBhYnN0cmFjdHxlbnwxfHx8fDE3ODMwNzk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { id: "club", title: "Programmers Club", subtitle: "Event Management Team", image: "https://images.unsplash.com/photo-1579567761406-4684ee0c75b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYWNrYXRob24lMjBjb2RpbmclMjB0ZWFtJTIwdGVjaG5vbG9neSUyMGRhcmslMjBhYnN0cmFjdHxlbnwxfHx8fDE3ODMwNzk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { id: "uiux", title: "UI/UX Design", subtitle: "Design Fundamentals", image: "https://images.unsplash.com/photo-1770486036751-e55247238964?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxoYWNrYXRob24lMjBjb2RpbmclMjB0ZWFtJTIwdGVjaG5vbG9neSUyMGRhcmslMjBhYnN0cmFjdHxlbnwxfHx8fDE3ODMwNzk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { id: "diploma", title: "B.E Computer Engineering", subtitle: "Graduated 2026", image: "https://images.unsplash.com/photo-1499080863200-1f37ed9cb653?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxjZXJ0aWZpY2F0ZSUyMGF3YXJkJTIwZG9jdW1lbnQlMjBwcmVtaXVtJTIwZGFya3xlbnwxfHx8fDE3ODMwNzk3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080" },
-  { id: "pattern", title: "Open Source", subtitle: "Community Contributions", image: "https://images.unsplash.com/photo-1660836685837-47651f406b30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxoYWNrYXRob24lMjBjb2RpbmclMjB0ZWFtJTIwdGVjaG5vbG9neSUyMGRhcmslMjBhYnN0cmFjdHxlbnwxfHx8fDE3ODMwNzk3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080" },
+  { id: "evjoints", title: "EVJoints Internship", subtitle: "UI/UX Design Intern", image: EvjointsCert },
+  { id: "iigc", title: "IIGC Winner", subtitle: "IIGC Hackathon 2025", image: IIGCCert  },
+  { id: "mern", title: "Full Stack MERN", subtitle: "MERN Certification", image: ApnaCert },
+  { id: "aicodex", title: "AI Codex Finalist", subtitle: "AI Codex 2024", image: AIcodexCert },
+  { id: "webathon", title: "IETE Finalist", subtitle: "IETE 2025", image: IETE},
+  { id: "club", title: "Mumbai Hacks 2025 Finalists", subtitle: "Mumbai Hacks 2025", image: MumbaiHacksCert  },
+  { id: "uiux", title: "Smart India Hackathon", subtitle: "cleared College round", image: SIH },
+  { id: "diploma", title: "Programmers Club", subtitle: "PR Head ", image: ProgCert },
+  { id: "pattern", title: "Webathon Finalists", subtitle: "Webathon 2025", image: webathonCert },
+  { id: "pattern", title: "Unthink Finalists", subtitle: "Unthink 2026", image: UnthinkCert },
+  { id: "Codeissence", title: "Codeissence Finalists", subtitle: "Codeissence 2024", image: Codeissence },
 ];
 
 // Rich modal content for each "Beyond the Code" interest, keyed by card id.
@@ -84,10 +137,7 @@ const interestModals: Record<string, Interest> = {
     story:
       "The gym taught me discipline, consistency and long-term thinking. Those same habits influence how I approach software engineering — showing up every day, improving gradually and enjoying the process.",
     images: [
-      "https://images.unsplash.com/photo-1576678927484-cc907957088c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbW9vZHklMjBneW0lMjBmaXRuZXNzJTIwd2VpZ2h0cyUyMHRyYWluaW5nfGVufDF8fHx8MTc4MzA4MTYxMXww&ixlib=rb-4.1.0&q=80&w=1200",
-      "https://images.unsplash.com/photo-1590487988256-9ed24133863e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxneW0lMjB3b3Jrb3V0JTIwd2VpZ2h0cyUyMGRhcmslMjBtb29keSUyMHRyYWluaW5nJTIwZGlzY2lwbGluZXxlbnwxfHx8fDE3ODMxMDQyMDV8MA&ixlib=rb-4.1.0&q=80&w=1200",
-      "https://images.unsplash.com/photo-1521805103424-d8f8430e8933?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxneW0lMjB3b3Jrb3V0JTIwd2VpZ2h0cyUyMGRhcmslMjBtb29keSUyMHRyYWluaW5nJTIwZGlzY2lwbGluZXxlbnwxfHx8fDE3ODMxMDQyMDV8MA&ixlib=rb-4.1.0&q=80&w=1200",
-      "https://images.unsplash.com/photo-1641337221253-fdc7237f6b61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxneW0lMjB3b3Jrb3V0JTIwd2VpZ2h0cyUyMGRhcmslMjBtb29keSUyMHRyYWluaW5nJTIwZGlzY2lwbGluZXxlbnwxfHx8fDE3ODMxMDQyMDV8MA&ixlib=rb-4.1.0&q=80&w=1200",
+      gym1, gym3, gym2,
     ],
   },
   design: {
@@ -99,7 +149,7 @@ const interestModals: Record<string, Interest> = {
     story:
       "Design is where empathy meets craft. Studying interfaces, spacing and motion sharpens my attention to detail and helps me build products that feel effortless to use.",
     images: [
-      "https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHdvcmtzcGFjZSUyMGNvbG9yJTIwcGFsZXR0ZSUyMGRhcmt8ZW58MXx8fHwxNzgzMDgxNjE3fDA&ixlib=rb-4.1.0&q=80&w=1200",
+      UI,
       "https://images.unsplash.com/photo-1626785774573-4b799315345d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHdvcmtzcGFjZSUyMGNvbG9yJTIwcGFsZXR0ZSUyMGRhcmt8ZW58MXx8fHwxNzgzMDgxNjE3fDA&ixlib=rb-4.1.0&q=80&w=1200",
       "https://images.unsplash.com/photo-1621111848501-8d3634f82336?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHdvcmtzcGFjZSUyMGNvbG9yJTIwcGFsZXR0ZSUyMGRhcmt8ZW58MXx8fHwxNzgzMDgxNjE3fDA&ixlib=rb-4.1.0&q=80&w=1200",
     ],
@@ -113,10 +163,7 @@ const interestModals: Record<string, Interest> = {
     story:
       "Travel constantly reminds me that growth happens outside familiar environments. Every journey improves adaptability, planning and perspective.",
     images: [
-      "https://images.unsplash.com/photo-1587307519295-2605c1396225?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzY2VuaWMlMjBtb3VudGFpbiUyMGxhbmRzY2FwZSUyMHRyYXZlbCUyMEluZGlhJTIwaGlsbHMlMjBuYXR1cmV8ZW58MXx8fHwxNzgzMTA0MjA4fDA&ixlib=rb-4.1.0&q=80&w=1200",
-      "https://images.unsplash.com/photo-1578645546130-a8e4c5becb17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxzY2VuaWMlMjBtb3VudGFpbiUyMGxhbmRzY2FwZSUyMHRyYXZlbCUyMEluZGlhJTIwaGlsbHMlMjBuYXR1cmV8ZW58MXx8fHwxNzgzMTA0MjA4fDA&ixlib=rb-4.1.0&q=80&w=1200",
-      "https://images.unsplash.com/photo-1663089551295-cee8e58807a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxzY2VuaWMlMjBtb3VudGFpbiUyMGxhbmRzY2FwZSUyMHRyYXZlbCUyMEluZGlhJTIwaGlsbHMlMjBuYXR1cmV8ZW58MXx8fHwxNzgzMTA0MjA4fDA&ixlib=rb-4.1.0&q=80&w=1200",
-      "https://images.unsplash.com/photo-1572238916064-69673fdc419f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2VuaWMlMjBtb3VudGFpbiUyMGxhbmRzY2FwZSUyMHRyYXZlbCUyMEluZGlhJTIwaGlsbHMlMjBuYXR1cmV8ZW58MXx8fHwxNzgzMTA0MjA4fDA&ixlib=rb-4.1.0&q=80&w=1200",
+      Srk, kayak, Delhi,Sandhan, Mahabaleshwar, Ooty
     ],
   },
   hackathons: {
@@ -133,10 +180,7 @@ const interestModals: Record<string, Interest> = {
       { label: "Webathon Finalist", icon: "medal" },
     ],
     images: [
-      "https://images.unsplash.com/photo-1746396887626-6bd54c6b2181?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxoYWNrYXRob24lMjB0ZWFtJTIwd2lubmluZyUyMGF3YXJkJTIwY2VyZW1vbnklMjBjZWxlYnJhdGlvbiUyMHN0YWdlfGVufDF8fHx8MTc4MzA5ODU3Mnww&ixlib=rb-4.1.0&q=80&w=1200",
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYWNrYXRob24lMjB0ZWFtJTIwY29kaW5nJTIwcHJlc2VudGF0aW9uJTIwc3RhZ2UlMjBzdHVkZW50cyUyMGxhcHRvcHN8ZW58MXx8fHwxNzgzMTA0MjEyfDA&ixlib=rb-4.1.0&q=80&w=1200",
-      "https://images.unsplash.com/photo-1756273343749-63f7d6ea0cda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxoYWNrYXRob24lMjB0ZWFtJTIwY29kaW5nJTIwcHJlc2VudGF0aW9uJTIwc3RhZ2UlMjBzdHVkZW50cyUyMGxhcHRvcHN8ZW58MXx8fHwxNzgzMTA0MjEyfDA&ixlib=rb-4.1.0&q=80&w=1200",
-      "https://images.unsplash.com/photo-1651608670845-e124df680a27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxoYWNrYXRob24lMjB0ZWFtJTIwY29kaW5nJTIwcHJlc2VudGF0aW9uJTIwc3RhZ2UlMjBzdHVkZW50cyUyMGxhcHRvcHN8ZW58MXx8fHwxNzgzMTA0MjEyfDA&ixlib=rb-4.1.0&q=80&w=1200",
+      IIGCWon, mumbaiHacks, cllg, err3
     ],
   },
   learning: {
@@ -627,7 +671,7 @@ export default function About() {
               >
                 <div className="relative rounded-[1.15rem] overflow-hidden bg-[#111113]">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1746396887626-6bd54c6b2181?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxoYWNrYXRob24lMjB0ZWFtJTIwd2lubmluZyUyMGF3YXJkJTIwY2VyZW1vbnklMjBjZWxlYnJhdGlvbiUyMHN0YWdlfGVufDF8fHx8MTc4MzA5ODU3Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+                    src={IIGCWon}
                     alt="Winning moment at IIGC Hackathon 2025"
                     className="w-full aspect-[16/11] object-cover transition-transform duration-700 group-hover:scale-105"
                   />
