@@ -469,7 +469,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-3 w-full sm:w-auto"
             >
-              <MagneticButton href="https://github.com" target="_blank" className={primaryBtn}>
+              <MagneticButton href="https://github.com/Aman-AK1" target="_blank" className={primaryBtn}>
                 <Github className="w-4 h-4" /> GitHub
               </MagneticButton>
               <MagneticButton href="www.linkedin.com/in/amankhan2312" target="_blank" className={secondaryBtn}>
