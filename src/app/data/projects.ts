@@ -30,6 +30,12 @@ import TravnirList from "../../assests/projects/Travnir/TravnirListing.png"
 import TravnirCreate from "../../assests/projects/Travnir/TravnirCreate.png"
 import TravnirReview from "../../assests/projects/Travnir/TravnirReview.png"
 
+//CuraAI
+// import CuraAIHero from "../../"
+import CuraAIHero from "../../assests/projects/CuraAI/CuraAIHero.jpeg"
+import CuraAIServices from "../../assests/projects/CuraAI/CuraAIServices.jpeg"
+import CuraAISchemes from "../../assests/projects/CuraAI/CuraAISchemes.jpeg"
+import CuraAIAppointments from "../../assests/projects/CuraAI/CuraAIAppointments.jpeg"
 
 export interface GalleryItem {
   label: string;
@@ -106,6 +112,14 @@ const TravnirGallery: GalleryItem[] = [
   { label: "Reviews", image: TravnirReview },
 ];
 
+const CuraAIGallery: GalleryItem[] = [
+  { label: "dashboard", image: CuraAIHero },
+  { label: "Services", image: CuraAIServices },
+  {label: "Schemes", image : CuraAISchemes},
+  // { label: "Mobile", image: resumeIQMobile },
+  // { label: "Features", image: resumeIQFeatures },
+  { label: "Appointments", image: CuraAIAppointments },
+];
 // const IMG = {
 //   code: hero,
 //   dashboard: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbW9kZSUyMGRhc2hib2FyZCUyMGludGVyZmFjZSUyMHNvZnR3YXJlfGVufDF8fHx8MTc4MTcyNDg4Nnww&ixlib=rb-4.1.0&q=80&w=1200",
@@ -379,7 +393,7 @@ export const projects: Project[] = [
     role: "UI/UX Designer • Researcher • Frontend Developer",
     category: "IIGC Winner",
     tags: ["MumbaiHacks Finalists", "IIGC Winner"],
-    image: resumeIQHero,
+    image: CuraAIHero,
     meta: { type: "Hackathon Project", stack: "UI/UX + Research", duration: "MumbaiHacks Finalist", year: "IIGC Winner" },
     context: "Hackathon Project",
     timeline: "48 Hours",
@@ -415,7 +429,7 @@ export const projects: Project[] = [
         outcome: "Successfully demonstrated a functional prototype during the hackathon.",
       },
     ],
-    gallery: resumeIQGallery,
+    gallery: CuraAIGallery,
     impact: [
       "MumbaiHacks Finalist",
       "IIGC Winner",
