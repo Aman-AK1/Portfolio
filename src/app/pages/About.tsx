@@ -472,7 +472,7 @@ export default function About() {
               <MagneticButton href="https://github.com" target="_blank" className={primaryBtn}>
                 <Github className="w-4 h-4" /> GitHub
               </MagneticButton>
-              <MagneticButton href="https://linkedin.com" target="_blank" className={secondaryBtn}>
+              <MagneticButton href="www.linkedin.com/in/amankhan2312" target="_blank" className={secondaryBtn}>
                 <Linkedin className="w-4 h-4" /> LinkedIn
               </MagneticButton>
               <MagneticButton href="/Aman_Resume_Portfolio.pdf" download className={secondaryBtn}>
